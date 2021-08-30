@@ -1,0 +1,29 @@
+mixin NavbarLittleSquirrel
+  nav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-5.d-block(data-navbar-on-scroll)
+    .container
+      a.navbar-brand(href='index.html')
+        img(src=`${CWD}assets/img/logo.svg`   height="34"  alt='logo')
+
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon 
+      #navbarSupportedContent.collapse.navbar-collapse.border-top.border-lg-0.mt-4.mt-lg-0
+        ul.navbar-nav.ms-auto.pt-2.pt-lg-0.font-base
+          li.nav-item.px-3.px-xl-4
+            a.nav-link.fw-medium(aria-current='page', href=`#destinations`) Destination
+          li.nav-item.px-3.px-xl-4
+            a.nav-link.fw-medium(aria-current='page', href=`#hotels`) Hotels
+          li.nav-item.px-3.px-xl-4
+            a.nav-link.fw-medium(aria-current='page', href=`#flights`) Flights
+          li.nav-item.px-3.px-xl-4
+            a.nav-link.fw-medium(aria-current='page', href=`#booking`) Booking
+          li.nav-item.px-3.px-xl-4
+            a.nav-link.fw-medium(aria-current='page', href=`#login`) Login
+          li.nav-item.px-3.px-xl-4
+            a.btn.btn-outline-dark.order-1.order-lg-0.fw-medium( href="#!") Sign Up
+          li.nav-item.dropdown.px-3.px-lg-0 
+            a.nav-link.dropdown-toggle.fw-medium(href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false") EN
+            ul.dropdown-menu.dropdown-menu-end(aria-labelledby="navbarDropdown")
+              li
+                a.dropdown-item(href="#") EN
+              li
+                a.dropdown-item(href="#") BN

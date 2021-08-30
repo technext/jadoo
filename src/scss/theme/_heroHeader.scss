@@ -1,0 +1,47 @@
+.home{
+  padding-top: toRem(120);
+  background-size: contain;
+  background-position: top;
+  @include media-breakpoint-up(xxl){ 
+    background-size: cover;
+  }
+  background-repeat: no-repeat;
+}
+
+.hero-title {
+  color: #181E4B;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: toRem(15);
+    top: toRem(40);
+    width: toRem(320);
+    height: toRem(13);
+    @include media-breakpoint-up(lg){ 
+      top: toRem(45);
+    }
+    @include media-breakpoint-up(xl){ 
+      top: toRem(67);
+      right: toRem(-15);
+    }
+    @include media-breakpoint-up(xxl){ 
+      top: toRem(75);
+      width: toRem(370);
+    }
+    background-image: url(../img/hero/shape.svg);
+    background-size: contain;
+    z-index: -1;
+  }
+}
+
+.backdrop{
+  backdrop-filter: blur(4px);
+}
+
+.shadow-transition{
+  padding: toRem(20) !important;
+  transition: padding 0.3s linear;
+}

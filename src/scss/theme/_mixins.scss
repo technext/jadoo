@@ -1,0 +1,14 @@
+@mixin hover-focus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin round-btn($height){
+  height: $height;
+  width: $height;
+  line-height: $height;
+  text-align: center;
+  padding: 0;
+}
