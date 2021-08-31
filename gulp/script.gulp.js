@@ -11,6 +11,7 @@ const merge = require("merge-stream");
 const webpackStream = require("webpack-stream");
 
 const {
+  // eslint-disable-next-line no-unused-vars
   isProd,
   paths,
   baseDir,
@@ -67,4 +68,3 @@ gulp.task("script", () => {
       reload();
     });
 });
-

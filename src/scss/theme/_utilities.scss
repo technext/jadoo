@@ -118,13 +118,12 @@ $utilities: map_merge(
     ),
     "translate-middle": (
       property: transform,
-      class: translate-middle,
+      class: translate,
       responsive: true,
       values: (
-        null: translate(-50%, -50%),
-        x: translateX(-50%),
-        y: translateY(-50%),
-        none: translate(0, 0)
+        middle: (translateX(-50%) translateY(-50%)),
+        middle-x: translateX(-50%),
+        middle-y: translateY(-50%),
       )
     ),
     "height": (
@@ -363,16 +362,6 @@ $utilities: map_merge(
       property: background-color,
       class: bg-soft,
       values: $theme-colors-soft
-    ),
-    "translate-middle": (
-      property: transform,
-      class: translate,
-      responsive: true,
-      values: (
-        middle: (translateX(-50%) translateY(-50%)),
-        middle-x: translateX(-50%),
-        middle-y: translateY(-50%),
-      )
     ),
   ),
   $utilities

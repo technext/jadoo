@@ -1,5 +1,5 @@
 const gulp = require("gulp");
-const { paths, baseDir, browserSync, isProd } = require("./utils.js");
+const { paths, baseDir, browserSync } = require("./utils.js");
 const { compilePug } = require("./pug.gulp.js");
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
