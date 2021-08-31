@@ -1,12 +1,13 @@
 mixin HeroHeader
-  section#home.home(style=`background-image: url(${CWD}assets/img/hero/hero-bg.svg)`)
+  section
+    +Background({image: `${CWD}assets/img/hero/hero-bg.svg`})
     .container
       .row.align-items-center
         .col-md-5.col-lg-6.order-0.order-md-1.text-end
           img.pt-7.pt-md-0.ms-n8(src=`${CWD}assets/img/hero/hero-img.png` style="width: 120%;" alt='hero-header')
         .col-md-7.col-lg-6.text-md-start.text-center.py-6
-          h4.fw-bold.font-sans-serif.text-danger.mb-4 Best Destinations around the world
-          h1.fs-9.fs-xl-13.fs-xxl-14.mb-5.hero-title Travel, enjoy and live a new and full life
+          h4.fw-bold.text-danger.mb-4 Best Destinations around the world
+          h1.fs-9.fs-xl-13.fs-xxl-14.font-cursive.fw-bold.mb-5.hero-title Travel, enjoy and live a new and full life
           p.mb-4.fw-medium Built Wicket longer admire do barton vanity itself do in it.
             br.d-none.d-xl-block
             | Preferred to sportsmen it engrossed listening. Park gate

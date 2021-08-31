@@ -22,11 +22,11 @@ append variables
     ]
 
 mixin Destination 
-  +Section.pt-9.pb-10.overflow-hidden
-    .position-absolute.start-100.bottom-0.translate-middle-x
+  +Section
+    .position-absolute.start-100.bottom-0.translate-middle-x.d-none.d-xl-block.ms-xl-n4.ms-xxl-0
       img(src=`${CWD}assets/img/dest/shape.svg`, alt="destination")
-    div.mb-7
-      +SectionTitle('center', 'Top Selling', 'Top Destinations')
+    .mb-7
+      +SectionTitle('Top Selling', 'Top Destinations')
     .row 
       each val in destinations
         +DestinationCard(val)

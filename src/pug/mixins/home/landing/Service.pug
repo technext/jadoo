@@ -21,14 +21,14 @@ append variables
         title: 'Customization',
         text: 'We deliver outsourced aviation services for military customers'
       }
-    ];
+    ]
 
 mixin Service 
-  +Section.overflow-hidden(style="padding-top: 6.1rem")
-    div.position-absolute.z-index--1.start-100.translate-middle-x
+  +Section(style="padding-top: 6.1rem")
+    .position-absolute.z-index--1.start-xxl-100.end-0.end-xxl-unset.translate-middle-xxl-x 
       img(src=`${CWD}assets/img/category/shape.svg`, style="max-width: 300px" alt="service")
-    div.mb-7
-      +SectionTitle('center', 'CATEGORY', 'We Offer Best Services')
+    .mb-7 
+      +SectionTitle('CATEGORY', 'We Offer Best Services')
     .row 
       each val in services
         +ServiceCard(val)

@@ -1,13 +1,3 @@
-.home{
-  padding-top: toRem(120);
-  background-size: contain;
-  background-position: top;
-  @include media-breakpoint-up(xxl){ 
-    background-size: cover;
-  }
-  background-repeat: no-repeat;
-}
-
 .hero-title {
   color: #181E4B;
   position: relative;
@@ -35,13 +25,4 @@
     background-size: contain;
     z-index: -1;
   }
-}
-
-.backdrop{
-  backdrop-filter: blur(4px);
-}
-
-.shadow-transition{
-  padding: toRem(20) !important;
-  transition: padding 0.3s linear;
 }

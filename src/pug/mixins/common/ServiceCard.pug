@@ -1,7 +1,7 @@
 mixin ServiceCard(prop)
   .col-lg-3.col-sm-6.mb-4 
-    .card.service-card.text-center.align-items-center 
+    .card.service-card.shadow-hover.rounded-3.text-center.align-items-center 
       img(src=`${CWD}assets/img/category/${prop.image}` width='75' alt="Service")
       .card-body.p-xxl-5.p-4 
-        h4.fw-semi-bold.font-sans-serif.mb-3= prop.title 
+        h4.mb-3= prop.title 
         p.mb-0.fw-medium= prop.text

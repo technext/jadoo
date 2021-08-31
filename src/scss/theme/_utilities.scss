@@ -78,6 +78,7 @@ $utilities: map_merge(
       property: top,
       responsive: true,
       values: (
+        unset: unset,
         0: 0,
         50: 50%,
         100: 100%
@@ -87,6 +88,7 @@ $utilities: map_merge(
       property: bottom,
       responsive: true,
       values: (
+        unset: unset,
         0: 0,
         50: 50%,
         100: 100%
@@ -97,6 +99,7 @@ $utilities: map_merge(
       class: start,
       responsive: true,
       values: (
+        unset: unset,
         0: 0,
         50: 50%,
         100: 100%
@@ -107,9 +110,21 @@ $utilities: map_merge(
       class: end,
       responsive: true,
       values: (
+        unset: unset,
         0: 0,
         50: 50%,
         100: 100%
+      )
+    ),
+    "translate-middle": (
+      property: transform,
+      class: translate-middle,
+      responsive: true,
+      values: (
+        null: translate(-50%, -50%),
+        x: translateX(-50%),
+        y: translateY(-50%),
+        none: translate(0, 0)
       )
     ),
     "height": (

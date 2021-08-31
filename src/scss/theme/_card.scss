@@ -1,97 +1,36 @@
 .card{
-  box-shadow: $box-shadow;
   border: none;
-  border-radius: toRem(24);
+}
 
-  &.service-card{
+.service-card{
+  &:before{
+    content: '';
+    position: absolute;
+    left: toRem(10);
+    bottom: toRem(10);
+    width: toRem(100);
+    height: toRem(100);
+    background-color: #DF6951;
+    border-radius: toRem(30) 0 toRem(10) 0;
+    z-index: -1;
     transition: $transition-base;
-    box-shadow: none;
-    border-radius: toRem(36);
 
+    @include media-breakpoint-down(md){
+      width: toRem(60);
+      height: toRem(60);
+      border-radius: toRem(20) 0 toRem(8) 0;
+    }
+  }
+
+  &:hover{
     &:before{
-      content: '';
-      position: absolute;
-      left: toRem(10);
-      bottom: toRem(10);
-      width: toRem(100);
-      height: toRem(100);
-      background-color: #DF6951;
-      border-radius: toRem(30) 0 toRem(10) 0;
-      z-index: -1;
-      transition: $transition-base;
+      left: toRem(-30);
+      bottom: toRem(-35);
 
       @include media-breakpoint-down(md){
-        width: toRem(60);
-        height: toRem(60);
-        border-radius: toRem(20) 0 toRem(8) 0;
+        left: toRem(-15);
+        bottom: toRem(-25);
       }
     }
-
-    &:hover{
-      box-shadow: $box-shadow;
-
-      &:before{
-        left: toRem(-30);
-        bottom: toRem(-35);
-
-        @include media-breakpoint-down(md){
-          left: toRem(-15);
-          bottom: toRem(-25);
-        }
-      }
-    }
-  }
-
-  &.partner-card{
-    transition: $transition-base;
-    box-shadow: none;
-    border-radius: toRem(10);
-    margin-bottom: toRem(24);
-    
-    &:hover{
-      box-shadow: $box-shadow;
-    }
-  }
-
-  &.booking-card {
-    max-width: toRem(370);
-
-    .shape{
-      right: toRem(-160);
-      top: toRem(-210);
-
-      img{
-        max-width: toRem(550);
-      }
-    }
-
-    .card-body{
-      padding: toRem(22) toRem(25);
-    }
-
-    .booking-card-img{
-      border-radius: toRem(24);
-      width: 100%;
-    }
-
-    .favorite{
-      &:hover .card{
-        visibility: visible;
-        opacity: 1;
-      }
-
-      .card{
-        border-radius: 18px;
-        visibility: hidden;
-        opacity: 0;
-        transition: 0.2s linear;
-  
-        .card-body{
-          padding: toRem(18) toRem(20);
-        }
-      }
-    }
-    
-
   }
 }

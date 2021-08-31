@@ -227,9 +227,9 @@ $link-hover-decoration: underline;
 //*-----------------------------------------------
 //|   Components
 //-----------------------------------------------*/
-$border-radius: .5rem !default;
-$border-radius-sm: 0.25rem !default;
-$border-radius-lg: 1rem !default;
+$border-radius: 1.5rem !default;
+$border-radius-sm: 0.625rem !default;
+$border-radius-lg: 2.25rem !default;
 
 //*-----------------------------------------------
 //|   Fonts Families
@@ -293,8 +293,8 @@ $h4-font-size: map_get($font-sizes, 2) !default;
 $h5-font-size: map_get($font-sizes, 1) !default;
 $h6-font-size: map_get($font-sizes, '-1') !default;
 
-$headings-font-family: $font-family-cursive !default;
-$headings-font-weight: $font-weight-light !default;
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-weight: $font-weight-semi-bold !default;
 $headings-color: $dark-blue !default;
 
 // scss-docs-start display-headings

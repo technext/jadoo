@@ -20,13 +20,13 @@ append variables
 
 mixin PartnerItem(props)
   .col 
-    .card.partner-card
+    .card.shadow-hover.mb-4(style="border-radius:10px;")
       .card-body.text-center 
         img.img-fluid(src=`${CWD}assets/img/partner/${props.img}` alt="")  
 
 mixin Partner 
-  +Section.pt-0
-    .row.row-cols-lg-5.row-cols-md-3.row-cols-2.align-items-center.justify-content-center 
+  +Section.pt-9.pt-lg-6
+    .row.row-cols-lg-5.row-cols-md-3.row-cols-2.flex-center 
       each item in partners 
         +PartnerItem(item)
       
