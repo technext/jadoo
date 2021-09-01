@@ -1,12 +1,12 @@
 mixin HeroHeader
-  section
+  section(style="padding-top: 7rem;")
     +Background({image: `${CWD}assets/img/hero/hero-bg.svg`})
     .container
       .row.align-items-center
         .col-md-5.col-lg-6.order-0.order-md-1.text-end
-          img.pt-7.pt-md-0.ms-n8(src=`${CWD}assets/img/hero/hero-img.png` style="width: 120%;" alt='hero-header')
+          img.pt-7.pt-md-0.ms-n8(src=`${CWD}assets/img/hero/hero-img.png` style="width: 100%;" alt='hero-header')
         .col-md-7.col-lg-6.text-md-start.text-center.py-6
-          h4.fw-bold.text-danger.mb-4 Best Destinations around the world
+          h4.fw-bold.text-danger.mb-3 Best Destinations around the world
           h1.fs-9.fs-xl-13.fs-xxl-14.font-cursive.fw-bold.mb-5.hero-title Travel, enjoy and live a new and full life
           p.mb-4.fw-medium Built Wicket longer admire do barton vanity itself do in it.
             br.d-none.d-xl-block
@@ -14,7 +14,7 @@ mixin HeroHeader
             br.d-none.d-xl-block
             | sell they west hard for the.
           .text-center.text-md-start 
-            a.btn.btn-primary.btn-lg.rounded.me-md-4.mb-3.mb-md-0.border-0.primary-btn-shadow(href='#!' role='button') Find out more
+            a.btn.btn-primary.btn-lg.me-md-4.mb-3.mb-md-0.border-0.primary-btn-shadow(href='#!' role='button') Find out more
             .w-100.d-block.d-md-none
             a(href='#!' role='button')
               span.btn.btn-danger.round-btn-lg.rounded-circle.me-3.danger-btn-shadow 
