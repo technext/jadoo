@@ -150,9 +150,12 @@
   backdrop-filter: blur(4px);
 }
 
+.navbar{
+  transition: padding 0.3s linear;
+}
+
 .shadow-transition{
   padding: toRem(20) !important;
-  transition: padding 0.3s linear;
 }
 
 .show-onhover{

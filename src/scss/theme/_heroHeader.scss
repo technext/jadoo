@@ -1,7 +1,19 @@
 .hero-title {
-  color: #181E4B;
+  font-family: $font-family-cursive;
+  font-weight: $font-weight-bold;
+  font-size: map-get($font-sizes, 9);
+  color: $navy-blue;
+  margin-bottom: 5px;
   position: relative;
   z-index: 1;
+
+  @include media-breakpoint-up(xl){ 
+    font-size: map-get($font-sizes, 13);
+  }
+
+  @include media-breakpoint-up(xxl){ 
+    font-size: map-get($font-sizes, 14);
+  }
 
   &:before {
     content: '';
@@ -14,10 +26,12 @@
       top: toRem(45);
     }
     @include media-breakpoint-up(xl){ 
+      font-size: map-get($font-sizes, 13);
       top: toRem(67);
       right: toRem(-15);
     }
     @include media-breakpoint-up(xxl){ 
+      font-size: map-get($font-sizes, 14);
       top: toRem(75);
       width: toRem(370);
     }
