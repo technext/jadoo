@@ -19305,11 +19305,14 @@ ul {
   backdrop-filter: blur(4px);
 }
 
-.shadow-transition {
-  padding: 1.25rem !important;
+.navbar {
   -webkit-transition: padding 0.3s linear;
   -o-transition: padding 0.3s linear;
   transition: padding 0.3s linear;
+}
+
+.shadow-transition {
+  padding: 1.25rem !important;
 }
 
 .show-onhover:hover .hideEl {
@@ -19466,9 +19469,25 @@ ul {
 }
 
 .hero-title {
+  font-family: "Volkhov", "DM Serif Display", cursive;
+  font-weight: 700;
+  font-size: 2.88651rem;
   color: #181E4B;
+  margin-bottom: 5px;
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 4.62363rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-title {
+    font-size: 5.20158rem;
+  }
 }
 
 .hero-title:before {
@@ -19491,6 +19510,7 @@ ul {
 
 @media (min-width: 1200px) {
   .hero-title:before {
+    font-size: 4.62363rem;
     top: 4.1875rem;
     right: -0.9375rem;
   }
@@ -19498,6 +19518,7 @@ ul {
 
 @media (min-width: 1400px) {
   .hero-title:before {
+    font-size: 5.20158rem;
     top: 4.6875rem;
     width: 23.125rem;
   }
