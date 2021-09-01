@@ -154,8 +154,13 @@
   transition: padding 0.3s linear;
 }
 
-.shadow-transition{
+.padding-transition{
   padding: toRem(20) !important;
+
+  // @include media-breakpoint-up(md){
+  //   padding-top: map-get($spacers, 5) !important;
+  //   padding-bottom: map-get($spacers, 5) !important;
+  // }
 }
 
 .show-onhover{

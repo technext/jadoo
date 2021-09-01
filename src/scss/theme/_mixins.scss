@@ -8,7 +8,8 @@
 @mixin round-btn($height){
   height: $height;
   width: $height;
-  line-height: $height;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
 }

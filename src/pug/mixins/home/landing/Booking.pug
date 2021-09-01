@@ -37,8 +37,8 @@ mixin Booking
   +Section
     .row.align-items-center 
       .col-lg-6 
-        .mb-4
-          +SectionTitle('Easy and Fast', 'Book your next trip in 3 easy steps', 'start')
+        .mb-4.text-start
+          +SectionTitle('Easy and Fast', 'Book your next trip in 3 easy steps')
         each val in stetData
           +Step(val)
 
@@ -54,8 +54,8 @@ mixin Booking
               .icon-group.mb-4 
                 each val in icons
                   +Icon(val)
-              .d-flex.align-items-start.justify-content-between
-                .d-flex.align-items-center
+              .d-flex.align-items-center.justify-content-between
+                .d-flex.align-items-center.mt-n1
                   img.me-3(src=`${CWD}assets/img/steps/building.svg` width='18' alt="building") 
                   span.fs--1.fw-medium 24 people going
                 .show-onhover.position-relative

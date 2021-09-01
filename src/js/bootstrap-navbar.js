@@ -42,10 +42,10 @@ const navbarInit = () => {
     const colorName = Object.keys(allColors).includes(name) ? name : 'light';
     const color = allColors[colorName];
     const bgClassName = `bg-${colorName}`;
-    const shadowName = 'shadow-transition';
+    const paddingName = 'padding-transition';
     const colorRgb = utils.hexToRgb(color);
     const { backgroundImage } = window.getComputedStyle(navbar);
-    const transition = 'background-color 0.35s ease';
+    const transition = 'background-color,padding 0.35s ease';
     navbar.style.backgroundImage = 'none';
 
     // Change navbar background color on scroll
@@ -60,7 +60,7 @@ const navbarInit = () => {
       alpha >= 1 && (alpha = 1);
       navbar.style.backgroundColor = `rgba(${colorRgb[0]}, ${colorRgb[1]}, ${colorRgb[2]}, ${alpha})`;
       navbar.style.backgroundImage = (alpha > 0 || utils.hasClass(navbarCollapse, 'show')) ? backgroundImage : 'none';
-      (alpha > 0 || utils.hasClass(navbarCollapse, 'show')) ? navbar.classList.add(shadowName) : navbar.classList.remove(shadowName);
+      (alpha > 0 || utils.hasClass(navbarCollapse, 'show')) ? navbar.classList.add(paddingName) : navbar.classList.remove(paddingName);
     });
 
     // Toggle bg class on window resize
@@ -68,39 +68,39 @@ const navbarInit = () => {
       const breakPoint = utils.getBreakpoint(navbar);
       if (window.innerWidth > breakPoint) {
         navbar.style.backgroundImage = html.scrollTop ? backgroundImage : 'none';
-        navbar.style.transition = 'none';
+        // navbar.style.transition = 'none';
       } else if (
         !utils.hasClass(
           navbar.querySelector(Selector.NAVBAR_TOGGLER),
           ClassNames.COLLAPSED
         )
       ) {
-        navbar.classList.add(bgClassName);
-        navbar.classList.add(shadowName);
+        // navbar.classList.add(bgClassName);
+        // navbar.classList.add(paddingName);
         navbar.style.backgroundImage = backgroundImage;
       }
 
       if (window.innerWidth <= breakPoint) {
-        navbar.style.transition = utils.hasClass(navbarCollapse, 'show') ? transition : 'none';
+        // navbar.style.transition = utils.hasClass(navbarCollapse, 'show') ? transition : 'none';
       }
 
     });
 
     navbarCollapse.addEventListener(Events.SHOW_BS_COLLAPSE, () => {
       navbar.classList.add(bgClassName);
-      navbar.classList.add(shadowName);
+      // navbar.classList.add(paddingName);
       navbar.style.backgroundImage = backgroundImage;
       navbar.style.transition = transition;
     });
 
     navbarCollapse.addEventListener(Events.HIDE_BS_COLLAPSE, () => {
       navbar.classList.remove(bgClassName);
-      navbar.classList.remove(shadowName);
+      // navbar.classList.remove(paddingName);
       !html.scrollTop && (navbar.style.backgroundImage = 'none');
     });
 
     navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, () => {
-      navbar.style.transition = 'none';
+      // navbar.style.transition = 'none';
     });
 
   }

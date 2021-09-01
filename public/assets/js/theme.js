@@ -289,13 +289,13 @@ var navbarInit = function navbarInit() {
     var colorName = Object.keys(allColors).includes(name) ? name : 'light';
     var color = allColors[colorName];
     var bgClassName = "bg-".concat(colorName);
-    var shadowName = 'shadow-transition';
+    var paddingName = 'padding-transition';
     var colorRgb = utils.hexToRgb(color);
 
     var _window$getComputedSt = window.getComputedStyle(navbar),
         backgroundImage = _window$getComputedSt.backgroundImage;
 
-    var transition = 'background-color 0.35s ease';
+    var transition = 'background-color,padding 0.35s ease';
     navbar.style.backgroundImage = 'none'; // Change navbar background color on scroll
 
     window.addEventListener(Events.SCROLL, function () {
@@ -311,38 +311,35 @@ var navbarInit = function navbarInit() {
       alpha >= 1 && (alpha = 1);
       navbar.style.backgroundColor = "rgba(".concat(colorRgb[0], ", ").concat(colorRgb[1], ", ").concat(colorRgb[2], ", ").concat(alpha, ")");
       navbar.style.backgroundImage = alpha > 0 || utils.hasClass(navbarCollapse, 'show') ? backgroundImage : 'none';
-      alpha > 0 || utils.hasClass(navbarCollapse, 'show') ? navbar.classList.add(shadowName) : navbar.classList.remove(shadowName);
+      alpha > 0 || utils.hasClass(navbarCollapse, 'show') ? navbar.classList.add(paddingName) : navbar.classList.remove(paddingName);
     }); // Toggle bg class on window resize
 
     utils.resize(function () {
       var breakPoint = utils.getBreakpoint(navbar);
 
       if (window.innerWidth > breakPoint) {
-        navbar.style.backgroundImage = html.scrollTop ? backgroundImage : 'none';
-        navbar.style.transition = 'none';
+        navbar.style.backgroundImage = html.scrollTop ? backgroundImage : 'none'; // navbar.style.transition = 'none';
       } else if (!utils.hasClass(navbar.querySelector(Selector.NAVBAR_TOGGLER), ClassNames.COLLAPSED)) {
-        navbar.classList.add(bgClassName);
-        navbar.classList.add(shadowName);
+        // navbar.classList.add(bgClassName);
+        // navbar.classList.add(paddingName);
         navbar.style.backgroundImage = backgroundImage;
       }
 
-      if (window.innerWidth <= breakPoint) {
-        navbar.style.transition = utils.hasClass(navbarCollapse, 'show') ? transition : 'none';
+      if (window.innerWidth <= breakPoint) {// navbar.style.transition = utils.hasClass(navbarCollapse, 'show') ? transition : 'none';
       }
     });
     navbarCollapse.addEventListener(Events.SHOW_BS_COLLAPSE, function () {
-      navbar.classList.add(bgClassName);
-      navbar.classList.add(shadowName);
+      navbar.classList.add(bgClassName); // navbar.classList.add(paddingName);
+
       navbar.style.backgroundImage = backgroundImage;
       navbar.style.transition = transition;
     });
     navbarCollapse.addEventListener(Events.HIDE_BS_COLLAPSE, function () {
-      navbar.classList.remove(bgClassName);
-      navbar.classList.remove(shadowName);
+      navbar.classList.remove(bgClassName); // navbar.classList.remove(paddingName);
+
       !html.scrollTop && (navbar.style.backgroundImage = 'none');
     });
-    navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, function () {
-      navbar.style.transition = 'none';
+    navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, function () {// navbar.style.transition = 'none';
     });
   }
 };

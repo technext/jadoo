@@ -4,7 +4,8 @@ mixin DestinationCard(props)
       img.card-img-top(src=`${CWD}assets/img/dest/${props.img}`, alt=props.place)
       .card-body.py-4.px-3 
         .d-flex.flex-column.flex-lg-row.justify-content-between.mb-3 
-          h4.text-secondary.fw-medium= props.place
+          h4.text-secondary.fw-medium
+            a.link-900.text-decoration-none.stretched-link(href="#!")= props.place
           span.fs-1.fw-medium= `$${props.cost}`
         .d-flex.align-items-center 
           img(src=`${CWD}assets/img/dest/navigation.svg`, style='margin-right: 14px' width='20' alt="navigation")

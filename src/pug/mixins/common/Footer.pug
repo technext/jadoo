@@ -11,23 +11,23 @@ mixin Footer
 
 mixin PreFooter 
   +Section.pb-0.pb-lg-4   
-    .row
-      .col-lg-3.col-md-6.col-12.mb-4.mb-lg-0.order-0 
+    .row 
+      .col-lg-3.col-md-7.col-12.mb-4.mb-md-6.mb-lg-0.order-0 
         img.mb-4(src=`${CWD}assets/img/logo2.svg`, width="150", alt="jadoo") 
         p.fs--1.text-secondary.mb-0.fw-medium Book your trip in minute, get full Control for much longer.
       .col-lg-2.col-md-4.mb-4.mb-lg-0.order-lg-1.order-md-2 
-        h4.footer-heading-color.fw-bold.font-sans-serif.mb-3.mb-md-4 Company
+        h4.footer-heading-color.fw-bold.font-sans-serif.mb-3.mb-lg-4 Company
         ul.list-unstyled.mb-0
           +FooterList('About', 'Careers', 'Mobile')
       .col-lg-2.col-md-4.mb-4.mb-lg-0.order-lg-2.order-md-3 
-        h4.footer-heading-color.fw-bold.font-sans-serif.mb-3.mb-md-4 Contact
+        h4.footer-heading-color.fw-bold.font-sans-serif.mb-3.mb-lg-4 Contact
         ul.list-unstyled.mb-0
           +FooterList('Help/FAQ', 'Press', 'Affiliate')
       .col-lg-2.col-md-4.mb-4.mb-lg-0.order-lg-3.order-md-4 
-        h4.footer-heading-color.fw-bold.font-sans-serif.mb-3.mb-md-4 More
+        h4.footer-heading-color.fw-bold.font-sans-serif.mb-3.mb-lg-4 More
         ul.list-unstyled.mb-0
           +FooterList('Airlinefees', 'Airline', 'Low fare tips')
-      .col-lg-3.col-md-6.col-12.mb-4.mb-lg-0.order-lg-4.order-md-1 
+      .col-lg-3.col-md-5.col-12.mb-4.mb-md-6.mb-lg-0.order-lg-4.order-md-1 
         .icon-group.mb-4 
           a.text-decoration-none.icon-item.shadow-social#facebook(href="#!")
             i.fab.fa-facebook-f 

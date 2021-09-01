@@ -40,3 +40,13 @@
     z-index: -1;
   }
 }
+
+.hero-img{
+  width: 105%;
+  margin-left: -(map-get($spacers, 8));
+
+  @include media-breakpoint-between(md, lg){
+    width: 135%;
+    margin-left: -(map-get($spacers, 7));
+  }
+}
