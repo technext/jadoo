@@ -20,7 +20,7 @@
   --bs-purple: #A1B0FC;
   --bs-pink: #D42DA3;
   --bs-red: #DF6951;
-  --bs-orange: #F17228;
+  --bs-orange: #DF6951;
   --bs-yellow: #F1A501;
   --bs-green: #79B93C;
   --bs-teal: #006380;
@@ -4751,8 +4751,8 @@ fieldset:disabled .btn {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #F17228;
-  background-color: rgba(241, 114, 40, 0.15);
+  color: #DF6951;
+  background-color: rgba(223, 105, 81, 0.15);
   border-color: transparent;
 }
 
@@ -19288,7 +19288,7 @@ ul {
   transition: padding 0.3s linear;
 }
 
-.shadow-transition {
+.padding-transition {
   padding: 1.25rem !important;
 }
 
@@ -19321,8 +19321,15 @@ ul {
 .round-btn-lg {
   height: 3.25rem;
   width: 3.25rem;
-  line-height: 3.25rem;
-  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 0;
 }
 
@@ -19501,11 +19508,23 @@ ul {
   }
 }
 
+.hero-img {
+  width: 105%;
+  margin-right: -5rem;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-img {
+    width: 135%;
+    margin-right: -4rem;
+  }
+}
+
 .card {
   border: none;
 }
 
-.service-card:before {
+.card.service-card:before {
   content: '';
   position: absolute;
   right: 0.625rem;
@@ -19521,20 +19540,20 @@ ul {
 }
 
 @media (max-width: 767.98px) {
-  .service-card:before {
+  .card.service-card:before {
     width: 3.75rem;
     height: 3.75rem;
     border-radius: 0 1.25rem 0 0.5rem;
   }
 }
 
-.service-card:hover:before {
+.card.service-card:hover:before {
   right: -1.875rem;
   bottom: -2.1875rem;
 }
 
 @media (max-width: 767.98px) {
-  .service-card:hover:before {
+  .card.service-card:hover:before {
     right: -0.9375rem;
     bottom: -1.5625rem;
   }
@@ -19588,7 +19607,7 @@ ul {
 
 .majestic-tabs .nav-link.active,
 .majestic-tabs .nav-item.show .nav-link {
-  border-bottom-color: #F17228;
+  border-bottom-color: #DF6951;
 }
 
 /*-----------------------------------------------
