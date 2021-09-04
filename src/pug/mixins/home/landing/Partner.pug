@@ -25,10 +25,11 @@ mixin PartnerItem(props)
         img.img-fluid(src=`${CWD}assets/img/partner/${props.img}` alt="")  
 
 mixin Partner 
-  +Section.pt-9.pt-lg-8
-    .row.row-cols-lg-5.row-cols-md-3.row-cols-2.flex-center 
-      each item in partners 
-        +PartnerItem(item)
+  .position-relative.pt-9.pt-lg-8.pb-6.pb-lg-8
+    .container 
+      .row.row-cols-lg-5.row-cols-md-3.row-cols-2.flex-center 
+        each item in partners 
+          +PartnerItem(item)
       
 
 

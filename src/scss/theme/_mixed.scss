@@ -156,11 +156,6 @@
 
 .padding-transition{
   padding: toRem(20) !important;
-
-  // @include media-breakpoint-up(md){
-  //   padding-top: map-get($spacers, 5) !important;
-  //   padding-bottom: map-get($spacers, 5) !important;
-  // }
 }
 
 .show-onhover{
